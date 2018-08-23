@@ -48,48 +48,82 @@
   <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">
       <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+          aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
         <a class="navbar-brand" href="index.html">Trip Mobile</a>
       </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <form class="navbar-form navbar-right" role="form">
+          <div id="welcome_username" class="navbar-brand"></div>
+          <button onclick="window.sessionStorage.clear(); window.location.href = 'login.html';" class="btn btn-danger">Logout</button>
+        </form>
+      </div>
+      <!--/.navbar-collapse -->
     </div>
   </nav>
   <hr/>
   <div class="center-elements">
-    <a href="profile.html"><img class="logo" width="30%" height="30%" src="img/profile_trip_mobile.png" /></label>  
-    </div>
-    <div class="center-elements">    
-    <p class="logo">Mon profil</p></a> 
-      </div>    
+    <a href="profile.html"><img class="logo" width="30%" height="30%" src="img/profile_trip_mobile.png" /></label>
+  </div>
+  <div class="center-elements">
+    <p class="logo">Mon profil</p></a>
+  </div>
   </div> <!-- /container -->
   <hr/>
-  <form class="navbar-form" role="form">
+  <div class="navbar-form">
     <div class="form-group">
-      Name:<input type="text"  width="50%" placeholder="Name" class="form-control">
+      First Name<span> </span><input id="prenom" type="text" width="50%" placeholder="First Name" class="form-control">
     </div>
     <br />
     <div class="form-group">
-      Last Name:<input type="text" width="50%" placeholder="Last Name" class="form-control">
+      Last Name<span> </span><input id="nom" type="text" width="50%" placeholder="Last Name" class="form-control">
     </div>
     <br />
     <div class="form-group">
-      E_mail:<input type="text" width="50%" placeholder="E_mail" class="form-control">
+      E_mail<span> </span><input id="email" type="text" width="50%" placeholder="E_mail" class="form-control">
     </div>
     <br />
     <div class="form-group">
-      Password<input type="password" width="50%" placeholder="Password" class="form-control">
+      Password<span> </span><input id="password" type="text" width="50%" placeholder="Password" class="form-control">
     </div>
-    <div class="navbar-form" role="form">
-        <a class="btn-primary" href="fg_pass.html">Change Password</a>
+    <div class="form-group">
+      Adresse<span> </span><textarea id="adresse" placeholder="Adresse" class="form-control"></textarea>
+    </div>
+    <div class="form-group">
+      Téléphone<span> </span><input id="tel" type="text" width="50%" placeholder="Téléphone" class="form-control">
+    </div>
+    <div type="button" id="update" class="btn btn-success">Update</div>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="myModalTitle"></h5>
+        </div>
+        <div class="modal-body" id="myModalBody">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
       </div>
-    <button type="submit" class="btn btn-success">Log in</button>
-  </form>
+    </div>
+  </div>
+  <hr/>
   <footer>Copyright CYMA</footer>
-</body>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+  <script src="js/vendor/jquery.rest.min.js"></script>
 
-<script src="js/vendor/bootstrap.min.js"></script>
+  <script src="js/vendor/bootstrap.min.js"></script>
 
-<script src="js/main.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/profile.js"></script>
 </body>
 
 </html>
