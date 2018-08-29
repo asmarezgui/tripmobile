@@ -1,5 +1,6 @@
 $(document).ready(function () {
 
+    //Si le user n'est pas connecté alors on redirige vers login.html 
     if(!window.sessionStorage["connected"]) {
         window.location.href = "login.html";
         return;

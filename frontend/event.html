@@ -75,24 +75,11 @@
       <!--/.navbar-collapse -->
     </div>
   </nav>
-  <hr/>
+  <hr />
+  <button onclick="window.history.back();" class="fa fa-arrow-left" aria-hidden="true">Revenir à la liste des événements</button>
+  <br />
+  <br />
   <div class="center-elements">
-    <a href="discover.html">
-      <img class="logo" width="30%" height="30%" src="img/discover_trip_mobile.png" />
-      <p class="logo">Discover</p>
-    </a>
-    <div class="btn-group btn-group-justified">
-      <div class="btn-group">
-        <button id="lieuxEvents" type="button" class="btn btn-primary">Lieux</button>
-      </div>
-      <div class="btn-group">
-        <button id="lieuxExcursions" type="button" class="btn btn-primary">Excursions</button>
-      </div>
-      <div class="btn-group">
-        <button id="lieuxRestaurants" type="button" class="btn btn-primary">Restaurants</button>
-      </div>
-    </div>
-    <input class="form-control" id="myInputSearch" type="text" placeholder="Search.." />
     <ul id="myList" class="list-group">
       <!-- Example
           <li class="list-group-item d-flex justify-content-between align-items-center">
@@ -121,7 +108,7 @@
   <script src="js/vendor/bootstrap.min.js"></script>
 
   <script src="js/main.js"></script>
-  <script src="js/discover.js"></script>
+  <script src="js/event.js"></script>
 </body>
 
 </html>

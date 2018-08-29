@@ -1,10 +1,13 @@
 $(document).ready(function () {
 
+    //On se connecte à l'API REST
     let client = new $.RestClient('http://localhost:3000/');
     client.add('users');
 
+    //On g_re 
     $("#login").on('click', function (e) {
         e.preventDefault();
+        e.stopPropagation();
         
         let email = $('#email').val();
         let password = $('#password').val();
@@ -25,7 +28,7 @@ $(document).ready(function () {
                 $("#myModal").modal({"focus": true})
                 setTimeout(function() {
                     window.location.href = "welcome.html";
-                }, 2000);
+                }, 1000);
             } else {
                 $("#myModalTitle").html("Votre login et/ou mot de passe sont incorrects !!!");
                 $("#myModalBody").html("Veuillez réessayez.");               
